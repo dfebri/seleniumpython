@@ -5,24 +5,21 @@ from webdriver_manager.chrome import ChromeDriverManager
 import unittest
 import time
 
-class login(unittest.TestCase):
+class saucedemotest(unittest.TestCase):
         
     def test_login(self):
         driver = webdriver.Chrome(ChromeDriverManager().install())
         driver.get("https://www.saucedemo.com/")
         driver.maximize_window()
-        # self.driver.find_element(By.LINK_TEXT,"Login").click()
         driver.find_element(By.ID, "user-name").send_keys("standard_user")
         driver.find_element(By.ID, "password").send_keys("secret_sauce")  
-        driver.find_element(By.ID, "login-button").click() 
-        # self.driver.find_element(By.NAME, value= "login").click()        
+        driver.find_element(By.ID, "login-button").click()        
         time.sleep(3)
 
     def test_shoppingcart(self):
         driver = webdriver.Chrome(ChromeDriverManager().install())
         driver.get("https://www.saucedemo.com/")
         driver.maximize_window()
-        # self.driver.find_element(By.LINK_TEXT,"Login").click()
         driver.find_element(By.ID, "user-name").send_keys("standard_user")
         driver.find_element(By.ID, "password").send_keys("secret_sauce")  
         driver.find_element(By.ID, "login-button").click() 
@@ -33,7 +30,6 @@ class login(unittest.TestCase):
         driver = webdriver.Chrome(ChromeDriverManager().install())
         driver.get("https://www.saucedemo.com/")
         driver.maximize_window()
-        # self.driver.find_element(By.LINK_TEXT,"Login").click()
         driver.find_element(By.ID, "user-name").send_keys("standard_user")
         driver.find_element(By.ID, "password").send_keys("secret_sauce")  
         driver.find_element(By.ID, "login-button").click() 
@@ -45,7 +41,6 @@ class login(unittest.TestCase):
         driver = webdriver.Chrome(ChromeDriverManager().install())
         driver.get("https://www.saucedemo.com/")
         driver.maximize_window()
-        # self.driver.find_element(By.LINK_TEXT,"Login").click()
         driver.find_element(By.ID, "user-name").send_keys("standard_user")
         driver.find_element(By.ID, "password").send_keys("secret_sauce")  
         driver.find_element(By.ID, "login-button").click() 
