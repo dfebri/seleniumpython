@@ -13,6 +13,7 @@ class saucedemotest(unittest.TestCase):
         driver.maximize_window()
         driver.find_element(By.ID, "user-name").send_keys("standard_user")
         driver.find_element(By.ID, "password").send_keys("secret_sauce")  
+        time.sleep(3)
         driver.find_element(By.ID, "login-button").click()    
         time.sleep(3)   
 
@@ -22,10 +23,10 @@ class saucedemotest(unittest.TestCase):
         driver.maximize_window()
         driver.find_element(By.ID, "user-name").send_keys("standard_user")
         driver.find_element(By.ID, "password").send_keys("secret_sauce")  
-        driver.find_element(By.ID, "login-button").click() 
-        time.sleep(5)
+        driver.find_element(By.ID, "login-button").click()
+        time.sleep(3) 
         driver.find_element(By.ID, "shopping_cart_container").click() 
-        time.sleep(5)
+        time.sleep(3)
 
     def test_about(driver):
         driver = webdriver.Chrome(ChromeDriverManager().install())
@@ -35,9 +36,9 @@ class saucedemotest(unittest.TestCase):
         driver.find_element(By.ID, "password").send_keys("secret_sauce")  
         driver.find_element(By.ID, "login-button").click() 
         driver.find_element(By.CLASS_NAME, "bm-burger-button").click() 
-        time.sleep(5)
+        time.sleep(3)
         driver.find_element(By.CSS_SELECTOR, "#about_sidebar_link").click() 
-        time.sleep(5)
+        time.sleep(3)
 
     def test_logout(driver):
         driver = webdriver.Chrome(ChromeDriverManager().install())
@@ -47,9 +48,9 @@ class saucedemotest(unittest.TestCase):
         driver.find_element(By.ID, "password").send_keys("secret_sauce")  
         driver.find_element(By.ID, "login-button").click() 
         driver.find_element(By.CLASS_NAME, "bm-burger-button").click() 
-        time.sleep(5)
+        time.sleep(3)
         driver.find_element(By.ID, "logout_sidebar_link").click() 
-        time.sleep(5)
-        
+        time.sleep(3)
+
 if __name__ == "__main__":
     unittest.main()
